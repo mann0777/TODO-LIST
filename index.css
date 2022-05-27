@@ -26,8 +26,12 @@ code {
   width: 25%;
   height: 80vh;
   background-color: #f4f4f4;
-  box-shadow: 5px 5px 25px -25px rgba(0, 0, 0, 0.5);  
+  box-shadow: 5px 5px 25px -5px rgba(0, 0, 0, 0.5);  
   border-radius: 15px;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  
 
 }
 
@@ -52,3 +56,63 @@ input{
   outline: none;
   border-bottom: 2px solid #8566aa;
 }
+
+.todo_style{
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+}
+
+.todo_style .fa fa-times{
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #8566aa;
+  border-radius: 50%;
+  margin: 0 15px 0 35px;
+  color: aliceblue;
+  box-shadow: 5px 5px 15px -5px rgba(0,0,0.3);
+}
+
+button{
+  min-height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  border-color: transparent;
+  color: #ffff;
+  background-color: #8566aa;
+  font-size: 40px;
+  border: none;
+  outline: none;
+  margin-left: 10px;
+  box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.5);  
+
+}
+
+button:hover{
+  background-color: #20bf6b;
+}
+
+ol{
+  margin-top: 30px;
+}
+
+.todo_style .fa-times:hover{
+  background-color: crimson;
+}
+
+.todo_style .fa-times:hover .list_style{
+  color: crimson;
+}
+
+@media  ( max-width: 768px){
+  .center_div{
+    width: 55%;
+  }
+}
+  
+
+
+

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import ToDoLists from "./ToDoLists";
 
 
 
@@ -16,13 +17,25 @@ const listofItems = ()=>{
         return[...oldItems, inputList];
     });
     setInputList("");
+
+    
+};
+
+const deleteitems = (id) => {
+
+    setItems((oldItems) => {
+        return oldItems.filter((arrElem, index) =>{
+        return index!== id;
+    });
+    });
+
 };
 
     return(
         <>
         <div className = "main_div">
         <div className="center_div">
-        <br/>
+        <  br/>
         <h1>TODO List</h1>
         <br/>
 
@@ -33,8 +46,11 @@ const listofItems = ()=>{
         <ol>
 
         {
-            Items.map((itemval) =>{
-                return<li>{itemval}</li>;
+            Items.map((itemval, index) =>{
+              return <ToDoLists text ={itemval}
+              key = {index}
+              id = {index}
+              onSelect ={deleteitems} />;
             })
         }
 
